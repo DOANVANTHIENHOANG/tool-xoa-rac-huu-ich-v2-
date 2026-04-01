@@ -7,7 +7,7 @@ import psutil
 
 def get_disk_info():
     obj_Disk = psutil.disk_usage('C:/')
-    free = round(obj_Disk.free / (1024**3), 2)
+    free = float("{:.2f}".format(obj_Disk.free / (1024**3)))
     return free
 
 def clean_system():
